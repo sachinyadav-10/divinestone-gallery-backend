@@ -1,42 +1,22 @@
-# Use python 3.13.13
 # Core Django & REST Framework
 Django>=4.2
 djangorestframework
+dj-database-url
+
+# Database
+psycopg2-binary
+
+# Authentication (Clerk)
+PyJWT
+cryptography
 
 # Utilities
 requests
-PyJWT
-pytz
+python-dotenv
+django-cors-headers
+boto3
+django-storages
+pillow
 
 # Production server
 gunicorn
-
-dotenv
-python-dotenv
-
-redis
-
-django-cors-headers
-phonenumbers
-passwordgenerator
-
-django-storages
-boto3
-
-django-phonenumber-field
-sendgrid
-
-pillow
-
-blinker>=1.7
-mongoengine
-pymongo
-certifi
-
-django-rest-framework-mongoengine
-
-weasyprint
-pydyf
-cairocffi
-tinycss2
-cssselect2
