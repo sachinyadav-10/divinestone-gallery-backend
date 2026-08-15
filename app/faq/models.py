@@ -1,6 +1,7 @@
 from django.db import models
+from app.common.models import BaseModel
 
-class FAQ(models.Model):
+class FAQ(BaseModel):
     question = models.TextField()
     answer = models.TextField()
     category = models.CharField(max_length=255, blank=True, null=True)
