@@ -2,19 +2,11 @@ FROM python:3.13-slim
 
 WORKDIR /app
 
+# Install PostgreSQL client dependencies and build tools
 RUN apt-get update && apt-get install -y \
-    default-libmysqlclient-dev \
+    libpq-dev \
+    gcc \
     build-essential \
-    pkg-config \
-    libpango-1.0-0 \
-    libpangoft2-1.0-0 \
-    libpangocairo-1.0-0 \
-    libharfbuzz-subset0 \
-    libcairo2 \
-    libgdk-pixbuf-2.0-0 \
-    libglib2.0-0 \
-    libffi-dev \
-    shared-mime-info \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
