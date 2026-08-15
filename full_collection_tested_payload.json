@@ -7,15 +7,15 @@
         },
         "item": [
             {
-                "id": "64a19c60-091a-4618-936f-88df290c8491",
+                "id": "833ffbde-c794-4a72-89d6-e2a24543b9d5",
                 "name": "Admin",
                 "item": [
                     {
-                        "id": "ddb2fdb3-a332-4f16-b9bc-b7698537e68c",
+                        "id": "2c980ad1-e34c-4146-99ab-38b06d94b73e",
                         "name": "Products",
                         "item": [
                             {
-                                "id": "0d02a181-bf78-439a-bb18-224b1e08d3cb",
+                                "id": "0a86f29e-27dd-48de-b5fc-c7a80ef18bc9",
                                 "name": "Create Product",
                                 "request": {
                                     "method": "POST",
@@ -42,7 +42,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "705b38b1-ef8e-42cc-aaec-04deeb223e32",
+                                        "id": "c44f98d9-969f-4d2e-b2bf-50f5bc074ade",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "POST",
@@ -76,12 +76,12 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product created successfully\",\n  \"data\": {\n    \"id\": 4,\n    \"created_at\": \"2026-08-15T17:25:42.918138Z\",\n    \"updated_at\": \"2026-08-15T17:25:42.918179Z\",\n    \"name\": \"Test Moorti Auto Generated\",\n    \"slug\": \"test-moorti-auto-generated\",\n    \"uid\": \"UH33MXWX\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\",\n    \"category\": 1,\n    \"material\": 1,\n    \"diety\": 2\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product created successfully\",\n  \"data\": {\n    \"id\": 6,\n    \"created_at\": \"2026-08-15T18:33:02.269831Z\",\n    \"updated_at\": \"2026-08-15T18:33:02.269872Z\",\n    \"name\": \"Test Moorti Auto Generated\",\n    \"slug\": \"test-moorti-auto-generated-1\",\n    \"uid\": \"QHHSAWTB\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\",\n    \"category\": 1,\n    \"material\": 1,\n    \"diety\": 2\n  }\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "6ca3757a-3e9b-4ce2-85f4-0d2c3d35cad8",
+                                "id": "660da8ef-88bc-410f-8477-c4348e1381b6",
                                 "name": "List Products",
                                 "request": {
                                     "method": "GET",
@@ -99,8 +99,8 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "4a109966-5377-42ba-b807-ef81598b1922",
-                                        "name": "Error Example",
+                                        "id": "58299c72-b725-41f8-9e54-5b0a1c7ce63a",
+                                        "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
                                             "url": {
@@ -115,8 +115,8 @@
                                                 ]
                                             }
                                         },
-                                        "status": "Error",
-                                        "code": 400,
+                                        "status": "OK",
+                                        "code": 200,
                                         "_postman_previewlanguage": "json",
                                         "header": [
                                             {
@@ -124,17 +124,17 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": false,\n  \"message\": \"type object 'ProductRepository' has no attribute 'get_all_products'\",\n  \"data\": null\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Products fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 6,\n      \"created_at\": \"2026-08-15T18:33:02.269831Z\",\n      \"updated_at\": \"2026-08-15T18:33:02.269872Z\",\n      \"name\": \"Test Moorti Auto Generated\",\n      \"slug\": \"test-moorti-auto-generated-1\",\n      \"uid\": \"QHHSAWTB\",\n      \"short_description\": null,\n      \"description\": \"A beautiful test moorti with auto slug.\",\n      \"keywords\": null,\n      \"height\": null,\n      \"min_weight\": null,\n      \"max_weight\": null,\n      \"original_price\": null,\n      \"selling_price\": null,\n      \"discount_percentage\": null,\n      \"gst\": null,\n      \"is_featured\": false,\n      \"is_active\": true,\n      \"availability\": \"in_stock\",\n      \"category\": 1,\n      \"material\": 1,\n      \"diety\": 2\n    },\n    {\n      \"id\": 5,\n      \"created_at\": \"2026-08-15T17:27:32.556931Z\",\n      \"updated_at\": \"2026-08-15T17:27:32.556973Z\",\n      \"name\": \"Test Moorti\",\n      \"slug\": \"test-moorti-1\",\n      \"uid\": \"THTUPJ21\",\n      \"short_description\": null,\n      \"description\": \"A beautiful test moorti.\",\n      \"keywords\": null,\n      \"height\": null,\n      \"min_weight\": null,\n      \"max_weight\": null,\n      \"original_price\": null,\n      \"selling_price\": null,\n      \"discount_percentage\": null,\n      \"gst\": null,\n      \"is_featured\": false,\n      \"is_active\": true,\n      \"availability\": \"in_stock\",\n      \"category\": 1,\n      \"material\": 1,\n      \"diety\": 2\n    },\n    {\n      \"id\": 4,\n      \"created_at\": \"2026-08-15T17:25:42.918138Z\",\n      \"updated_at\": \"2026-08-15T17:31:40.691229Z\",\n      \"name\": \"Updated Test Moorti\",\n      \"slug\": \"test-moorti-auto-generated\",\n      \"uid\": \"UH33MXWX\",\n      \"short_description\": null,\n      \"description\": \"A beautiful test moorti with auto slug.\",\n      \"keywords\": null,\n      \"height\": null,\n      \"min_weight\": null,\n      \"max_weight\": null,\n      \"original_price\": null,\n      \"selling_price\": null,\n      \"discount_percentage\": null,\n      \"gst\": null,\n      \"is_featured\": false,\n      \"is_active\": false,\n      \"availability\": \"in_stock\",\n      \"category\": 1,\n      \"material\": 1,\n      \"diety\": 2\n    },\n    {\n      \"id\": 3,\n      \"created_at\": \"2026-08-15T17:07:30.783868Z\",\n      \"updated_at\": \"2026-08-15T17:28:34.945310Z\",\n      \"name\": \"Updated Test Moorti\",\n      \"slug\": \"test-moorti\",\n      \"uid\": \"85540eaa\",\n      \"short_description\": null,\n      \"description\": \"A beautiful test moorti.\",\n      \"keywords\": null,\n      \"height\": null,\n      \"min_weight\": null,\n      \"max_weight\": null,\n      \"original_price\": null,\n      \"selling_price\": null,\n      \"discount_percentage\": null,\n      \"gst\": null,\n      \"is_featured\": false,\n      \"is_active\": false,\n      \"availability\": \"in_stock\",\n      \"category\": 1,\n      \"material\": 1,\n      \"diety\": 2\n    },\n    {\n      \"id\": 2,\n      \"created_at\": \"2026-08-15T17:03:15.916374Z\",\n      \"updated_at\": \"2026-08-15T17:03:15.916390Z\",\n      \"name\": \"New Brass Ganesha\",\n      \"slug\": \"new-brass-ganesha\",\n      \"uid\": \"TEST-002\",\n      \"short_description\": \"New brass moorti\",\n      \"description\": null,\n      \"keywords\": null,\n      \"height\": null,\n      \"min_weight\": null,\n      \"max_weight\": null,\n      \"original_price\": null,\n      \"selling_price\": \"6000.00\",\n      \"discount_percentage\": null,\n      \"gst\": null,\n      \"is_featured\": false,\n      \"is_active\": true,\n      \"availability\": \"in_stock\",\n      \"category\": 1,\n      \"material\": 1,\n      \"diety\": 1\n    },\n    {\n      \"id\": 1,\n      \"created_at\": \"2026-08-15T17:02:23.634977Z\",\n      \"updated_at\": \"2026-08-15T17:03:15.925441Z\",\n      \"name\": \"Marble Ganesha\",\n      \"slug\": \"marble-ganesha\",\n      \"uid\": \"TEST-001\",\n      \"short_description\": \"A beautiful Ganesha moorti\",\n      \"description\": \"Detailed description of Ganesha moorti\",\n      \"keywords\": null,\n      \"height\": null,\n      \"min_weight\": null,\n      \"max_weight\": null,\n      \"original_price\": null,\n      \"selling_price\": \"5000.00\",\n      \"discount_percentage\": null,\n      \"gst\": null,\n      \"is_featured\": true,\n      \"is_active\": false,\n      \"availability\": \"in_stock\",\n      \"category\": 1,\n      \"material\": 1,\n      \"diety\": 1\n    }\n  ]\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "a0dcb7f2-4457-4274-8d72-9b3d45ead3f7",
+                                "id": "ad536808-fee6-470a-94e7-a99f2154cf07",
                                 "name": "Get Product Details",
                                 "request": {
                                     "method": "GET",
                                     "url": {
-                                        "raw": "{{base_url}}/api/admin/products/4/",
+                                        "raw": "{{base_url}}/api/admin/products/6/",
                                         "host": [
                                             "{{base_url}}"
                                         ],
@@ -142,18 +142,18 @@
                                             "api",
                                             "admin",
                                             "products",
-                                            "4"
+                                            "6"
                                         ]
                                     }
                                 },
                                 "response": [
                                     {
-                                        "id": "66045bdc-79c0-4042-961a-a142edcce232",
+                                        "id": "3c83c740-7a32-488b-979e-116aab8577a4",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
                                             "url": {
-                                                "raw": "{{base_url}}/api/admin/products/4/",
+                                                "raw": "{{base_url}}/api/admin/products/6/",
                                                 "host": [
                                                     "{{base_url}}"
                                                 ],
@@ -161,7 +161,7 @@
                                                     "api",
                                                     "admin",
                                                     "products",
-                                                    "4"
+                                                    "6"
                                                 ]
                                             }
                                         },
@@ -174,17 +174,17 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product details fetched successfully\",\n  \"data\": {\n    \"id\": 4,\n    \"created_at\": \"2026-08-15T17:25:42.918138Z\",\n    \"updated_at\": \"2026-08-15T17:25:42.918179Z\",\n    \"name\": \"Test Moorti Auto Generated\",\n    \"slug\": \"test-moorti-auto-generated\",\n    \"uid\": \"UH33MXWX\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\",\n    \"category\": 1,\n    \"material\": 1,\n    \"diety\": 2\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product details fetched successfully\",\n  \"data\": {\n    \"id\": 6,\n    \"created_at\": \"2026-08-15T18:33:02.269831Z\",\n    \"updated_at\": \"2026-08-15T18:33:02.269872Z\",\n    \"name\": \"Test Moorti Auto Generated\",\n    \"slug\": \"test-moorti-auto-generated-1\",\n    \"uid\": \"QHHSAWTB\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\",\n    \"category\": 1,\n    \"material\": 1,\n    \"diety\": 2\n  }\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "1310d6e1-5fa9-46ad-b921-f91d69641215",
+                                "id": "debde265-9495-410f-9f03-e85240b00990",
                                 "name": "Update Product",
                                 "request": {
                                     "method": "PATCH",
                                     "url": {
-                                        "raw": "{{base_url}}/api/admin/products/4/",
+                                        "raw": "{{base_url}}/api/admin/products/6/",
                                         "host": [
                                             "{{base_url}}"
                                         ],
@@ -192,7 +192,7 @@
                                             "api",
                                             "admin",
                                             "products",
-                                            "4"
+                                            "6"
                                         ]
                                     },
                                     "body": {
@@ -207,12 +207,12 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "a860fb8b-6855-4d55-a90c-7370e17c1d88",
+                                        "id": "49cf9862-6324-4b30-ad6a-5e5af3639fb3",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "PATCH",
                                             "url": {
-                                                "raw": "{{base_url}}/api/admin/products/4/",
+                                                "raw": "{{base_url}}/api/admin/products/6/",
                                                 "host": [
                                                     "{{base_url}}"
                                                 ],
@@ -220,7 +220,7 @@
                                                     "api",
                                                     "admin",
                                                     "products",
-                                                    "4"
+                                                    "6"
                                                 ]
                                             },
                                             "body": {
@@ -242,17 +242,17 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product updated successfully\",\n  \"data\": {\n    \"id\": 4,\n    \"created_at\": \"2026-08-15T17:25:42.918138Z\",\n    \"updated_at\": \"2026-08-15T17:25:42.946296Z\",\n    \"name\": \"Updated Test Moorti\",\n    \"slug\": \"test-moorti-auto-generated\",\n    \"uid\": \"UH33MXWX\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\",\n    \"category\": 1,\n    \"material\": 1,\n    \"diety\": 2\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product updated successfully\",\n  \"data\": {\n    \"id\": 6,\n    \"created_at\": \"2026-08-15T18:33:02.269831Z\",\n    \"updated_at\": \"2026-08-15T18:33:02.295341Z\",\n    \"name\": \"Updated Test Moorti\",\n    \"slug\": \"test-moorti-auto-generated-1\",\n    \"uid\": \"QHHSAWTB\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\",\n    \"category\": 1,\n    \"material\": 1,\n    \"diety\": 2\n  }\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "6efc42c8-fee3-4252-8e64-a2f64d4be80b",
+                                "id": "76cbd404-a30e-4116-b13c-c837ad54767e",
                                 "name": "Delete Product",
                                 "request": {
                                     "method": "DELETE",
                                     "url": {
-                                        "raw": "{{base_url}}/api/admin/products/4/",
+                                        "raw": "{{base_url}}/api/admin/products/6/",
                                         "host": [
                                             "{{base_url}}"
                                         ],
@@ -260,18 +260,18 @@
                                             "api",
                                             "admin",
                                             "products",
-                                            "4"
+                                            "6"
                                         ]
                                     }
                                 },
                                 "response": [
                                     {
-                                        "id": "0ed5987f-8f7c-4d36-9350-7317762028cb",
+                                        "id": "004ed1be-2299-4d1f-8b0f-b35c989c0c00",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "DELETE",
                                             "url": {
-                                                "raw": "{{base_url}}/api/admin/products/4/",
+                                                "raw": "{{base_url}}/api/admin/products/6/",
                                                 "host": [
                                                     "{{base_url}}"
                                                 ],
@@ -279,7 +279,7 @@
                                                     "api",
                                                     "admin",
                                                     "products",
-                                                    "4"
+                                                    "6"
                                                 ]
                                             }
                                         },
@@ -299,11 +299,11 @@
                         ]
                     },
                     {
-                        "id": "62981ca9-0126-485a-8fab-81faa6f5d4d3",
+                        "id": "208b7483-9f4f-4cb6-a077-a6479cd215b0",
                         "name": "Reviews",
                         "item": [
                             {
-                                "id": "53cdd8a3-6fb2-49d1-b819-40fed8601eda",
+                                "id": "9e055aca-3a66-49fb-9cd0-a336ddcd848f",
                                 "name": "Create Review",
                                 "request": {
                                     "method": "POST",
@@ -320,7 +320,7 @@
                                     },
                                     "body": {
                                         "mode": "raw",
-                                        "raw": "{\n  \"product\": 4,\n  \"rating\": 5,\n  \"comment\": \"Absolutely stunning craftsmanship!\"\n}",
+                                        "raw": "{\n  \"product\": 6,\n  \"rating\": 5,\n  \"comment\": \"Absolutely stunning craftsmanship!\"\n}",
                                         "options": {
                                             "raw": {
                                                 "language": "json"
@@ -330,7 +330,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "35ac1858-da30-40cf-a225-1d3f766cf766",
+                                        "id": "d23c0fda-8421-4ee6-babd-97fa5699fbea",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "POST",
@@ -347,7 +347,7 @@
                                             },
                                             "body": {
                                                 "mode": "raw",
-                                                "raw": "{\n  \"product\": 4,\n  \"rating\": 5,\n  \"comment\": \"Absolutely stunning craftsmanship!\"\n}",
+                                                "raw": "{\n  \"product\": 6,\n  \"rating\": 5,\n  \"comment\": \"Absolutely stunning craftsmanship!\"\n}",
                                                 "options": {
                                                     "raw": {
                                                         "language": "json"
@@ -364,12 +364,12 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Review created successfully\",\n  \"data\": {\n    \"id\": 3,\n    \"product\": 4,\n    \"user\": null,\n    \"product_name\": \"Updated Test Moorti\",\n    \"rating\": 5,\n    \"comment\": \"Absolutely stunning craftsmanship!\",\n    \"is_approved\": false,\n    \"created_at\": \"2026-08-15T17:25:42.982046Z\"\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Review created successfully\",\n  \"data\": {\n    \"id\": 4,\n    \"product\": 6,\n    \"user\": null,\n    \"product_name\": \"Updated Test Moorti\",\n    \"rating\": 5,\n    \"comment\": \"Absolutely stunning craftsmanship!\",\n    \"is_approved\": false,\n    \"created_at\": \"2026-08-15T18:33:02.312217Z\"\n  }\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "364e0a91-58e8-4b01-9edb-967be72f7e9d",
+                                "id": "b6c957e6-32a8-4607-b30e-5b399da98299",
                                 "name": "List Reviews",
                                 "request": {
                                     "method": "GET",
@@ -387,7 +387,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "0daf3dee-6ec7-4ba1-be3c-855a959802d0",
+                                        "id": "d7c63379-ea3e-441b-9a8d-38c88eac5620",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -412,18 +412,18 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Reviews fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 3,\n      \"product\": 4,\n      \"user\": null,\n      \"product_name\": \"Updated Test Moorti\",\n      \"rating\": 5,\n      \"comment\": \"Absolutely stunning craftsmanship!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T17:25:42.982046Z\"\n    },\n    {\n      \"id\": 2,\n      \"product\": 3,\n      \"user\": null,\n      \"product_name\": \"Test Moorti\",\n      \"rating\": 5,\n      \"comment\": \"Absolutely stunning craftsmanship!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T17:07:30.814544Z\"\n    },\n    {\n      \"id\": 1,\n      \"product\": 1,\n      \"user\": null,\n      \"product_name\": \"Marble Ganesha\",\n      \"rating\": 5,\n      \"comment\": \"Amazing quality!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T17:03:15.932944Z\"\n    }\n  ]\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Reviews fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 4,\n      \"product\": 6,\n      \"user\": null,\n      \"product_name\": \"Updated Test Moorti\",\n      \"rating\": 5,\n      \"comment\": \"Absolutely stunning craftsmanship!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T18:33:02.312217Z\"\n    },\n    {\n      \"id\": 3,\n      \"product\": 4,\n      \"user\": null,\n      \"product_name\": \"Updated Test Moorti\",\n      \"rating\": 5,\n      \"comment\": \"Absolutely stunning craftsmanship!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T17:25:42.982046Z\"\n    },\n    {\n      \"id\": 2,\n      \"product\": 3,\n      \"user\": null,\n      \"product_name\": \"Updated Test Moorti\",\n      \"rating\": 5,\n      \"comment\": \"Absolutely stunning craftsmanship!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T17:07:30.814544Z\"\n    },\n    {\n      \"id\": 1,\n      \"product\": 1,\n      \"user\": null,\n      \"product_name\": \"Marble Ganesha\",\n      \"rating\": 5,\n      \"comment\": \"Amazing quality!\",\n      \"is_approved\": false,\n      \"created_at\": \"2026-08-15T17:03:15.932944Z\"\n    }\n  ]\n}"
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        "id": "b1f56c5d-434d-404d-a53a-98bee01572a7",
+                        "id": "cd9239b7-a418-4f56-b0bd-ff96006af795",
                         "name": "Contact Us",
                         "item": [
                             {
-                                "id": "5f43670c-34ed-4f92-9d6b-92639bb44899",
+                                "id": "c65577e5-65cb-4ea0-9cf8-264fe3dfb2b8",
                                 "name": "List Messages",
                                 "request": {
                                     "method": "GET",
@@ -442,7 +442,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "e5f002ba-bc1d-4667-98cb-174ccb4ae67b",
+                                        "id": "d755d142-4ebf-44c2-a290-1f42fac8875a",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -468,12 +468,12 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Contact messages fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 6,\n      \"created_at\": \"2026-08-15T17:25:43.004865Z\",\n      \"updated_at\": \"2026-08-15T17:25:43.004876Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 5,\n      \"created_at\": \"2026-08-15T17:19:10.801586Z\",\n      \"updated_at\": \"2026-08-15T17:19:10.801623Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": \"9509092101\",\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 4,\n      \"created_at\": \"2026-08-15T17:19:04.410432Z\",\n      \"updated_at\": \"2026-08-15T17:19:04.410468Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 3,\n      \"created_at\": \"2026-08-15T17:18:56.244191Z\",\n      \"updated_at\": \"2026-08-15T17:18:56.244290Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": \"9509092101\",\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 2,\n      \"created_at\": \"2026-08-15T17:07:30.824533Z\",\n      \"updated_at\": \"2026-08-15T17:07:30.824545Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 1,\n      \"created_at\": \"2026-08-15T17:03:15.834153Z\",\n      \"updated_at\": \"2026-08-15T17:03:15.834178Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Hello, this is a test message!\",\n      \"status\": \"pending\"\n    }\n  ]\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Contact messages fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 7,\n      \"created_at\": \"2026-08-15T18:33:02.344790Z\",\n      \"updated_at\": \"2026-08-15T18:33:02.344803Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 6,\n      \"created_at\": \"2026-08-15T17:25:43.004865Z\",\n      \"updated_at\": \"2026-08-15T17:25:43.004876Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 5,\n      \"created_at\": \"2026-08-15T17:19:10.801586Z\",\n      \"updated_at\": \"2026-08-15T17:19:10.801623Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": \"9509092101\",\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 4,\n      \"created_at\": \"2026-08-15T17:19:04.410432Z\",\n      \"updated_at\": \"2026-08-15T17:19:04.410468Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 3,\n      \"created_at\": \"2026-08-15T17:18:56.244191Z\",\n      \"updated_at\": \"2026-08-15T17:18:56.244290Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": \"9509092101\",\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 2,\n      \"created_at\": \"2026-08-15T17:07:30.824533Z\",\n      \"updated_at\": \"2026-08-15T17:07:30.824545Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Do you ship internationally?\",\n      \"status\": \"pending\"\n    },\n    {\n      \"id\": 1,\n      \"created_at\": \"2026-08-15T17:03:15.834153Z\",\n      \"updated_at\": \"2026-08-15T17:03:15.834178Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"message\": \"Hello, this is a test message!\",\n      \"status\": \"pending\"\n    }\n  ]\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "82c70c04-cffb-4fbe-bd1d-2ad9c41c5bb2",
+                                "id": "7bba928e-de56-4b2d-b733-bd46f88ce74b",
                                 "name": "List Customize Requests",
                                 "request": {
                                     "method": "GET",
@@ -492,7 +492,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "710e2d90-4889-4c60-979c-207df7d0d7cf",
+                                        "id": "aca67b09-c382-4ec6-9c34-fde40e313f8e",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -518,7 +518,7 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Customize requests fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 4,\n      \"created_at\": \"2026-08-15T17:25:43.011259Z\",\n      \"updated_at\": \"2026-08-15T17:25:43.011270Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 3,\n      \"created_at\": \"2026-08-15T17:19:39.388616Z\",\n      \"updated_at\": \"2026-08-15T17:19:39.389194Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 2,\n      \"created_at\": \"2026-08-15T17:07:30.833010Z\",\n      \"updated_at\": \"2026-08-15T17:07:30.833020Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 1,\n      \"created_at\": \"2026-08-15T17:03:15.841601Z\",\n      \"updated_at\": \"2026-08-15T17:03:15.841612Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom brass statue\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    }\n  ]\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Customize requests fetched successfully\",\n  \"data\": [\n    {\n      \"id\": 5,\n      \"created_at\": \"2026-08-15T18:33:02.351803Z\",\n      \"updated_at\": \"2026-08-15T18:33:02.351814Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 4,\n      \"created_at\": \"2026-08-15T17:25:43.011259Z\",\n      \"updated_at\": \"2026-08-15T17:25:43.011270Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 3,\n      \"created_at\": \"2026-08-15T17:19:39.388616Z\",\n      \"updated_at\": \"2026-08-15T17:19:39.389194Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 2,\n      \"created_at\": \"2026-08-15T17:07:30.833010Z\",\n      \"updated_at\": \"2026-08-15T17:07:30.833020Z\",\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom 5ft marble statue.\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    },\n    {\n      \"id\": 1,\n      \"created_at\": \"2026-08-15T17:03:15.841601Z\",\n      \"updated_at\": \"2026-08-15T17:03:15.841612Z\",\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\",\n      \"phone\": null,\n      \"city\": \"Mumbai\",\n      \"pincode\": null,\n      \"approximate_height\": null,\n      \"preferred_material\": null,\n      \"description\": \"Looking for a custom brass statue\",\n      \"reference_image\": null,\n      \"status\": \"pending\",\n      \"user\": null\n    }\n  ]\n}"
                                     }
                                 ]
                             }
@@ -527,15 +527,15 @@
                 ]
             },
             {
-                "id": "5303b3c3-35f0-4003-98c0-9e4a3b0b5b54",
+                "id": "65986997-85a5-4646-881e-ce5614ab2e87",
                 "name": "Website",
                 "item": [
                     {
-                        "id": "2b035f66-e2bc-46b9-8ad2-ccc3c3acf6a2",
+                        "id": "1d05d41b-b710-4a2e-97d2-f9b35559755e",
                         "name": "Products",
                         "item": [
                             {
-                                "id": "77c7110d-aef3-4f40-9245-a622fb24d6ae",
+                                "id": "32f2b27f-d905-4e13-aaec-88e9d4afaef8",
                                 "name": "Get Products",
                                 "request": {
                                     "method": "GET",
@@ -553,7 +553,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "d96cac7b-68b6-4515-8bec-6e7bfe6d8cf5",
+                                        "id": "c88941ad-e7f9-4e60-be9d-a4c6b5cb8ec5",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -578,17 +578,17 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Products fetched successfully\",\n  \"data\": [\n    {\n      \"slug\": \"test-moorti-auto-generated\",\n      \"uid\": \"UH33MXWX\",\n      \"title\": \"Updated Test Moorti\",\n      \"short_description\": null,\n      \"category\": \"God Sculptures\",\n      \"size\": null,\n      \"material\": \"Marble\",\n      \"cover_photo\": null,\n      \"selling_price\": null,\n      \"original_price\": null\n    },\n    {\n      \"slug\": \"new-brass-ganesha\",\n      \"uid\": \"TEST-002\",\n      \"title\": \"New Brass Ganesha\",\n      \"short_description\": \"New brass moorti\",\n      \"category\": \"God Sculptures\",\n      \"size\": null,\n      \"material\": \"Marble\",\n      \"cover_photo\": null,\n      \"selling_price\": \"6000.00\",\n      \"original_price\": null\n    }\n  ]\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Products fetched successfully\",\n  \"data\": [\n    {\n      \"slug\": \"test-moorti-auto-generated-1\",\n      \"uid\": \"QHHSAWTB\",\n      \"title\": \"Updated Test Moorti\",\n      \"short_description\": null,\n      \"category\": \"God Sculptures\",\n      \"size\": null,\n      \"material\": \"Marble\",\n      \"cover_photo\": null,\n      \"selling_price\": null,\n      \"original_price\": null\n    },\n    {\n      \"slug\": \"test-moorti-1\",\n      \"uid\": \"THTUPJ21\",\n      \"title\": \"Test Moorti\",\n      \"short_description\": null,\n      \"category\": \"God Sculptures\",\n      \"size\": null,\n      \"material\": \"Marble\",\n      \"cover_photo\": null,\n      \"selling_price\": null,\n      \"original_price\": null\n    },\n    {\n      \"slug\": \"new-brass-ganesha\",\n      \"uid\": \"TEST-002\",\n      \"title\": \"New Brass Ganesha\",\n      \"short_description\": \"New brass moorti\",\n      \"category\": \"God Sculptures\",\n      \"size\": null,\n      \"material\": \"Marble\",\n      \"cover_photo\": null,\n      \"selling_price\": \"6000.00\",\n      \"original_price\": null\n    }\n  ]\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "3a428006-d5a7-49df-8dee-26191243e801",
+                                "id": "e88c8cf6-e934-4f7e-934c-78176abad436",
                                 "name": "Get Product Details",
                                 "request": {
                                     "method": "GET",
                                     "url": {
-                                        "raw": "{{base_url}}/api/v1/products/test-moorti-auto-generated/",
+                                        "raw": "{{base_url}}/api/v1/products/test-moorti-auto-generated-1/",
                                         "host": [
                                             "{{base_url}}"
                                         ],
@@ -596,18 +596,18 @@
                                             "api",
                                             "v1",
                                             "products",
-                                            "test-moorti-auto-generated"
+                                            "test-moorti-auto-generated-1"
                                         ]
                                     }
                                 },
                                 "response": [
                                     {
-                                        "id": "5d1540fd-c1cf-4535-813b-673b2734be5f",
+                                        "id": "75a91904-e4e0-4fb7-bf1d-0b8233b70bfe",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
                                             "url": {
-                                                "raw": "{{base_url}}/api/v1/products/test-moorti-auto-generated/",
+                                                "raw": "{{base_url}}/api/v1/products/test-moorti-auto-generated-1/",
                                                 "host": [
                                                     "{{base_url}}"
                                                 ],
@@ -615,7 +615,7 @@
                                                     "api",
                                                     "v1",
                                                     "products",
-                                                    "test-moorti-auto-generated"
+                                                    "test-moorti-auto-generated-1"
                                                 ]
                                             }
                                         },
@@ -628,18 +628,18 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product details fetched successfully\",\n  \"data\": {\n    \"id\": 4,\n    \"category\": \"God Sculptures\",\n    \"material\": \"Marble\",\n    \"diety\": \"Hanuman Ji\",\n    \"images\": [],\n    \"created_at\": \"2026-08-15T17:25:42.918138Z\",\n    \"updated_at\": \"2026-08-15T17:25:42.946296Z\",\n    \"name\": \"Updated Test Moorti\",\n    \"slug\": \"test-moorti-auto-generated\",\n    \"uid\": \"UH33MXWX\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\"\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Product details fetched successfully\",\n  \"data\": {\n    \"id\": 6,\n    \"category\": \"God Sculptures\",\n    \"material\": \"Marble\",\n    \"diety\": \"Hanuman Ji\",\n    \"images\": [],\n    \"created_at\": \"2026-08-15T18:33:02.269831Z\",\n    \"updated_at\": \"2026-08-15T18:33:02.295341Z\",\n    \"name\": \"Updated Test Moorti\",\n    \"slug\": \"test-moorti-auto-generated-1\",\n    \"uid\": \"QHHSAWTB\",\n    \"short_description\": null,\n    \"description\": \"A beautiful test moorti with auto slug.\",\n    \"keywords\": null,\n    \"height\": null,\n    \"min_weight\": null,\n    \"max_weight\": null,\n    \"original_price\": null,\n    \"selling_price\": null,\n    \"discount_percentage\": null,\n    \"gst\": null,\n    \"is_featured\": false,\n    \"is_active\": true,\n    \"availability\": \"in_stock\"\n  }\n}"
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        "id": "e5061b6f-3f83-4a3d-a64e-081434bf214f",
+                        "id": "bc285f31-ffea-4e36-97ba-eb149c9ee1f4",
                         "name": "Contact Us",
                         "item": [
                             {
-                                "id": "51c1602d-0d2f-49fb-9fa4-a54910667fcc",
+                                "id": "f34e821e-334c-49fa-a850-d88e575105fa",
                                 "name": "Submit Message",
                                 "request": {
                                     "method": "POST",
@@ -667,7 +667,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "5cf49467-47c6-499a-ad64-54366ff01f4c",
+                                        "id": "9d6fc0f7-972b-4d5a-a986-d8ce3344a547",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "POST",
@@ -707,7 +707,7 @@
                                 ]
                             },
                             {
-                                "id": "fb267bfd-e6e6-4c99-ab0d-63954cf74870",
+                                "id": "2ba0a9a9-dcb1-440f-a033-78f7495e2b13",
                                 "name": "Submit Customize Request",
                                 "request": {
                                     "method": "POST",
@@ -735,7 +735,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "e82e372e-fd82-433f-b87d-d2da58bb2014",
+                                        "id": "02a89fbc-a212-4d0b-a02f-e75eb95b1e69",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "POST",
@@ -777,11 +777,11 @@
                         ]
                     },
                     {
-                        "id": "01a64970-f777-4010-93ae-639efff18755",
+                        "id": "5de98bb4-cb1f-4ec8-b09e-14ee42f74040",
                         "name": "Home",
                         "item": [
                             {
-                                "id": "922279b6-efb0-40ea-93d0-0fc500a5f83b",
+                                "id": "31349a67-c60e-4d6a-b2c6-38d9ec756148",
                                 "name": "Home Blocks",
                                 "request": {
                                     "method": "GET",
@@ -800,7 +800,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "6ce3f639-dd61-4256-b42a-45c9a33099e4",
+                                        "id": "cb89f358-1d5f-4b35-8994-868d732e2118",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -826,12 +826,12 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Home page blocks fetched successfully\",\n  \"data\": {\n    \"blocks\": [\n      {\n        \"type\": \"popular_moorti\",\n        \"data\": {\n          \"title\": \"Popular Moorti\",\n          \"products\": []\n        }\n      },\n      {\n        \"type\": \"shop_by_dream_moorti\",\n        \"data\": {\n          \"title\": \"Shop by Dream Moorti\",\n          \"dieties\": [\n            {\n              \"diety_id\": 1,\n              \"diety_name\": \"Ganesha\",\n              \"diety_slug\": \"ganesha\",\n              \"products\": [\n                {\n                  \"slug\": \"new-brass-ganesha\",\n                  \"uid\": \"TEST-002\",\n                  \"title\": \"New Brass Ganesha\",\n                  \"short_description\": \"New brass moorti\",\n                  \"category\": \"God Sculptures\",\n                  \"size\": null,\n                  \"material\": \"Marble\",\n                  \"cover_photo\": null,\n                  \"selling_price\": \"6000.00\",\n                  \"original_price\": null\n                }\n              ]\n            }\n          ]\n        }\n      },\n      {\n        \"type\": \"dream_temples\",\n        \"data\": {\n          \"title\": \"Dream Temples\",\n          \"products\": []\n        }\n      },\n      {\n        \"type\": \"shop_by_categories\",\n        \"data\": {\n          \"title\": \"Shop by Categories\",\n          \"categories\": [\n            {\n              \"id\": 1,\n              \"name\": \"God Sculptures\",\n              \"slug\": \"god-sculptures\",\n              \"image_url\": null\n            }\n          ]\n        }\n      },\n      {\n        \"type\": \"shop_home_decors\",\n        \"data\": {\n          \"title\": \"Shop Home Decors\",\n          \"products\": []\n        }\n      },\n      {\n        \"type\": \"reviews\",\n        \"data\": {\n          \"title\": \"Testimonials\",\n          \"reviews\": []\n        }\n      }\n    ]\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Home page blocks fetched successfully\",\n  \"data\": {\n    \"blocks\": [\n      {\n        \"type\": \"popular_moorti\",\n        \"data\": {\n          \"title\": \"Popular Moorti\",\n          \"products\": []\n        }\n      },\n      {\n        \"type\": \"shop_by_dream_moorti\",\n        \"data\": {\n          \"title\": \"Shop by Dream Moorti\",\n          \"dieties\": [\n            {\n              \"diety_id\": 1,\n              \"diety_name\": \"Ganesha\",\n              \"diety_slug\": \"ganesha\",\n              \"products\": [\n                {\n                  \"slug\": \"new-brass-ganesha\",\n                  \"uid\": \"TEST-002\",\n                  \"title\": \"New Brass Ganesha\",\n                  \"short_description\": \"New brass moorti\",\n                  \"category\": \"God Sculptures\",\n                  \"size\": null,\n                  \"material\": \"Marble\",\n                  \"cover_photo\": null,\n                  \"selling_price\": \"6000.00\",\n                  \"original_price\": null\n                }\n              ]\n            },\n            {\n              \"diety_id\": 2,\n              \"diety_name\": \"Hanuman Ji\",\n              \"diety_slug\": \"hanuman-ji\",\n              \"products\": [\n                {\n                  \"slug\": \"test-moorti-1\",\n                  \"uid\": \"THTUPJ21\",\n                  \"title\": \"Test Moorti\",\n                  \"short_description\": null,\n                  \"category\": \"God Sculptures\",\n                  \"size\": null,\n                  \"material\": \"Marble\",\n                  \"cover_photo\": null,\n                  \"selling_price\": null,\n                  \"original_price\": null\n                }\n              ]\n            }\n          ]\n        }\n      },\n      {\n        \"type\": \"dream_temples\",\n        \"data\": {\n          \"title\": \"Dream Temples\",\n          \"products\": []\n        }\n      },\n      {\n        \"type\": \"shop_by_categories\",\n        \"data\": {\n          \"title\": \"Shop by Categories\",\n          \"categories\": [\n            {\n              \"id\": 1,\n              \"name\": \"God Sculptures\",\n              \"slug\": \"god-sculptures\",\n              \"image_url\": null\n            }\n          ]\n        }\n      },\n      {\n        \"type\": \"shop_home_decors\",\n        \"data\": {\n          \"title\": \"Shop Home Decors\",\n          \"products\": []\n        }\n      },\n      {\n        \"type\": \"reviews\",\n        \"data\": {\n          \"title\": \"Testimonials\",\n          \"reviews\": []\n        }\n      }\n    ]\n  }\n}"
                                     }
                                 ]
                             },
                             {
-                                "id": "23114439-f668-47f3-a8ba-17ddf61ea93a",
+                                "id": "a2946bc7-2eff-4c4a-994c-a465facba991",
                                 "name": "Search",
                                 "request": {
                                     "method": "GET",
@@ -850,7 +850,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "5961f5bc-370d-47c1-8109-ec3f8fd567b6",
+                                        "id": "dcfb7a70-0c8d-4b00-a661-781cadc83c73",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -876,18 +876,18 @@
                                                 "value": "application/json"
                                             }
                                         ],
-                                        "body": "{\n  \"success\": true,\n  \"message\": \"Search results fetched successfully\",\n  \"data\": {\n    \"products\": [\n      {\n        \"slug\": \"new-brass-ganesha\",\n        \"uid\": \"TEST-002\",\n        \"title\": \"New Brass Ganesha\",\n        \"short_description\": \"New brass moorti\",\n        \"category\": \"God Sculptures\",\n        \"size\": null,\n        \"material\": \"Marble\",\n        \"cover_photo\": null,\n        \"selling_price\": \"6000.00\",\n        \"original_price\": null\n      }\n    ],\n    \"categories\": [],\n    \"dieties\": []\n  }\n}"
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Search results fetched successfully\",\n  \"data\": {\n    \"products\": [\n      {\n        \"slug\": \"test-moorti-1\",\n        \"uid\": \"THTUPJ21\",\n        \"title\": \"Test Moorti\",\n        \"short_description\": null,\n        \"category\": \"God Sculptures\",\n        \"size\": null,\n        \"material\": \"Marble\",\n        \"cover_photo\": null,\n        \"selling_price\": null,\n        \"original_price\": null\n      },\n      {\n        \"slug\": \"new-brass-ganesha\",\n        \"uid\": \"TEST-002\",\n        \"title\": \"New Brass Ganesha\",\n        \"short_description\": \"New brass moorti\",\n        \"category\": \"God Sculptures\",\n        \"size\": null,\n        \"material\": \"Marble\",\n        \"cover_photo\": null,\n        \"selling_price\": \"6000.00\",\n        \"original_price\": null\n      }\n    ],\n    \"categories\": [],\n    \"dieties\": []\n  }\n}"
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        "id": "b7da6132-c69c-4580-96f0-8af663d8203f",
+                        "id": "006286bf-fa17-45de-b21a-4d52da17e171",
                         "name": "Health",
                         "item": [
                             {
-                                "id": "4e9cda27-772c-4e1f-8b3e-f13e702eb80b",
+                                "id": "b1278dd1-e639-4134-add0-41aefd1cb1f8",
                                 "name": "Health Check",
                                 "request": {
                                     "method": "GET",
@@ -905,7 +905,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "8d3f5c47-e5ec-45e3-8b2c-c147edec9a8d",
+                                        "id": "58c884af-0359-433b-a0fa-21a9fb7aeb9d",
                                         "name": "Success Example",
                                         "originalRequest": {
                                             "method": "GET",
@@ -935,15 +935,73 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "id": "785974ed-cf4f-4d4a-bbd8-b72fb286342c",
+                        "name": "Upload",
+                        "item": [
+                            {
+                                "id": "7382cd29-00d7-4c76-9e0a-e4a0e9a435cb",
+                                "name": "Generate Presigned URL",
+                                "request": {
+                                    "method": "GET",
+                                    "url": {
+                                        "raw": "{{base_url}}/api/v1/common/upload/presigned-url/?filename=test.jpg&file_type=image/jpeg",
+                                        "host": [
+                                            "{{base_url}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "common",
+                                            "upload",
+                                            "presigned-url"
+                                        ]
+                                    }
+                                },
+                                "response": [
+                                    {
+                                        "id": "095d34b2-7e4d-4d5f-86e2-83457bf46a4c",
+                                        "name": "Success Example",
+                                        "originalRequest": {
+                                            "method": "GET",
+                                            "url": {
+                                                "raw": "{{base_url}}/api/v1/common/upload/presigned-url/?filename=test.jpg&file_type=image/jpeg",
+                                                "host": [
+                                                    "{{base_url}}"
+                                                ],
+                                                "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "common",
+                                                    "upload",
+                                                    "presigned-url"
+                                                ]
+                                            }
+                                        },
+                                        "status": "OK",
+                                        "code": 200,
+                                        "_postman_previewlanguage": "json",
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "body": "{\n  \"success\": true,\n  \"message\": \"Presigned URL generated successfully\",\n  \"data\": {\n    \"upload_url\": \"https://6e156d1103356b5dd391fd37e4ee2fd3.r2.cloudflarestorage.com/divinstonegallary/uploads/11207909a9a843d0b47a724c2c4b7890.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=5e79131e35578f1c725bc3859726fb90%2F20260815%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260815T183302Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=47f7cd0e4f6d52584de6ef5723db49b745ce845e689c20bd23579ee79b114c5a\",\n    \"object_key\": \"uploads/11207909a9a843d0b47a724c2c4b7890.jpg\",\n    \"public_url\": \"https://pub-<random>.r2.dev/uploads/11207909a9a843d0b47a724c2c4b7890.jpg\"\n  }\n}"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
             {
-                "id": "d9ec96cc-c09a-4114-9de6-733c2e8c2386",
+                "id": "b18746ce-a548-4f49-898a-7ca90d6ea4a2",
                 "name": "Webhooks",
                 "item": [
                     {
-                        "id": "00ec3867-2e4e-4bb9-9cad-b9aa11a73e90",
+                        "id": "40303441-8287-4089-bf2e-7ba95a3eeef8",
                         "name": "Clerk Webhook",
                         "request": {
                             "method": "POST",
@@ -971,7 +1029,7 @@
                         },
                         "response": [
                             {
-                                "id": "ebec7faf-ddab-4966-8398-44822b90cc23",
+                                "id": "ca543b57-0439-4ba6-8bbd-8d43a37bfe35",
                                 "name": "Success Example",
                                 "originalRequest": {
                                     "method": "POST",

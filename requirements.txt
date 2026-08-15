@@ -9,6 +9,7 @@ psycopg2-binary
 # Authentication (Clerk)
 PyJWT
 cryptography
+svix
 
 # Utilities
 requests
