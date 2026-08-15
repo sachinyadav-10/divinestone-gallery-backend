@@ -12,8 +12,12 @@ class ContactMessage(models.Model):
         return f"Message from {self.name}"
 
 class CustomizeRequest(models.Model):
-    city = models.CharField(max_length=100)
-    pincode = models.CharField(max_length=20)
+    user = models.ForeignKey(Customer, on_delete=models.CASCADE, blank=True, null=True)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=False, null=False)
+    pincode = models.CharField(max_length=20, blank=True, null=True)
     approximate_height = models.CharField(max_length=100, blank=True, null=True)
     preferred_material = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
