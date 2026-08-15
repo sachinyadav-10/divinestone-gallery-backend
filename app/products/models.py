@@ -1,33 +1,51 @@
 from django.db import models
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from app.common.models import BaseModel
+import string
+import random
 
-class Category(models.Model):
+AVAILABILITY_CHOICES = [
+    ('in_stock', 'In Stock'),
+    ('made_to_order', 'Made to Order'),
+    ('out_of_stock', 'Out of Stock')
+]
+
+def create_random_uid(size=8, chars=string.digits + string.ascii_uppercase):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+class Category(BaseModel):
     name = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True)
+    slug = models.CharField(max_length=255, unique=True)
     description = models.TextField(blank=True, null=True)
+    image_url = models.URLField(max_length=1024, blank=True, null=True)
     is_active = models.BooleanField(default=True)
-
     def __str__(self):
         return self.name
 
-class Material (models.Model):
+class Material(BaseModel):
     name = models.CharField(max_length=255)
+    slug = models.CharField(max_length=16, unique=True)
+    is_active = models.BooleanField(default=True)
     
     def __str__(self):
         return self.name
 
-class Diety (models.Model):
+class Diety(BaseModel):
     name = models.CharField(max_length=255)
+    slug = models.CharField(max_length=16, unique=True)
+    is_active = models.BooleanField(default=True)
     
     def __str__(self):
         return self.name
 
-class Product(models.Model):
-    category = models.ForeignKey(Category, related_name='products', on_delete=models.SET_NULL, null=False, blank=False)
-    material = models.ForeignKey(Material, related_name='products', on_delete=models.SET_NULL, null=False, blank=False)
-    diety = models.ForeignKey(Diety, related_name='products', on_delete=models.SET_NULL, null=False, blank=False)
+class Product(BaseModel):
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.PROTECT, null=False, blank=False)
+    material = models.ForeignKey(Material, related_name='products', on_delete=models.PROTECT, null=False, blank=False)
+    diety = models.ForeignKey(Diety, related_name='products', on_delete=models.PROTECT, null=False, blank=False)
     name = models.CharField(max_length=255, blank=False, null=False)
     slug = models.SlugField(unique=True, blank=False, null=False)
-    uid = models.CharField(max_length=255, unique=True, blank=False, null=False) #need to autogenrate by signals
+    uid = models.CharField(max_length=255, unique=True, blank=False, null=False)
     short_description = models.CharField(max_length=500, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     keywords = models.TextField(blank=True, null=True)
@@ -41,13 +59,11 @@ class Product(models.Model):
     is_featured = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     availability = models.CharField(max_length=20, choices=AVAILABILITY_CHOICES, default='in_stock') 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
-class ProductImage(models.Model):
+class ProductImage(BaseModel):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
     image_url = models.URLField(max_length=1024, blank=True, null=True) # Used if storing direct R2 URL
     object_key = models.CharField(max_length=500, blank=True, null=True) # Used if storing R2 object key
@@ -57,3 +73,11 @@ class ProductImage(models.Model):
 
     def __str__(self):
         return f"Image for {self.product.name}"
+
+@receiver(pre_save, sender=Product)
+def generate_product_uid(sender, instance, **kwargs):
+    if not instance.uid:
+        uid = create_random_uid()
+        while sender.objects.filter(uid=uid).exists():
+            uid = create_random_uid()
+        instance.uid = uid

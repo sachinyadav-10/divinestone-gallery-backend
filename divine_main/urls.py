@@ -11,10 +11,14 @@ urlpatterns = [
     path('api/v1/reviews/', include('app.reviews.urls_customer')),
     path('api/v1/contact/', include('app.contactus.urls_customer')),
     path('api/v1/faqs/', include('app.faq.urls_customer')),
+    path('api/v1/application/', include('app.applicationmodule.urls')),
 
     # Admin APIs
     path('api/admin/products/', include('app.products.urls_admin')),
     path('api/admin/reviews/', include('app.reviews.urls_admin')),
     path('api/admin/contact/', include('app.contactus.urls_admin')),
     path('api/admin/faqs/', include('app.faq.urls_admin')),
+
+    # Webhooks
+    path('api/webhooks/accounts/', include('app.accounts.urls_webhooks')),
 ]
