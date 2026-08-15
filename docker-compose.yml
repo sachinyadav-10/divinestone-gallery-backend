@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+     context: .  # Path to your Dockerfile
+     dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8004:8000"
+    expose:
+      - "8004"
+    mem_limit: 512m
+    cpus: 0.5
