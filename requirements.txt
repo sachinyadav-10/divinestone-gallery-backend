@@ -1,14 +1,42 @@
-asgiref==3.11.1
-Django==4.2.30
-django-cors-headers==4.9.0
-djangorestframework==3.16.1
-dnspython==2.7.0
-gunicorn==23.0.0
-mongoengine==0.29.3
-packaging==26.2
-pillow==11.3.0
-pymongo==4.17.0
-python-dotenv==1.2.1
-sqlparse==0.5.5
-typing_extensions==4.16.0
-whitenoise==6.11.0
+# Use python 3.13.13
+# Core Django & REST Framework
+Django>=4.2
+djangorestframework
+
+# Utilities
+requests
+PyJWT
+pytz
+
+# Production server
+gunicorn
+
+dotenv
+python-dotenv
+
+redis
+
+django-cors-headers
+phonenumbers
+passwordgenerator
+
+django-storages
+boto3
+
+django-phonenumber-field
+sendgrid
+
+pillow
+
+blinker>=1.7
+mongoengine
+pymongo
+certifi
+
+django-rest-framework-mongoengine
+
+weasyprint
+pydyf
+cairocffi
+tinycss2
+cssselect2
