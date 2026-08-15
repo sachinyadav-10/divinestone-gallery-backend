@@ -1,9 +1,10 @@
+from django.contrib import admin
 from django.urls import path, include
-from divine_main.views import health
+from .views import HealthCheckView
 
 urlpatterns = [
-    # Global endpoints
-    path('api/v1/health/', health),
+    # Global health check for testing deployment and configuration
+    path('api/v1/health/', HealthCheckView.as_view(), name='health'),
     
     # Customer APIs (v1)
     path('api/v1/products/', include('app.products.urls_customer')),
