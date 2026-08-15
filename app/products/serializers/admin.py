@@ -5,6 +5,7 @@ class ProductAdminSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
+        read_only_fields = ['slug', 'uid']
 
     def create(self, validated_data):
         return super().create(validated_data)

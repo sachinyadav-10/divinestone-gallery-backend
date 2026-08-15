@@ -3,6 +3,10 @@ from django.db.models import Q
 
 class ProductRepository:
     @staticmethod
+    def get_all_products():
+        return Product.objects.all().order_by('-created_at')
+
+    @staticmethod
     def get_active_products():
         return Product.objects.filter(is_active=True).select_related('category', 'material', 'diety').prefetch_related('images')
 

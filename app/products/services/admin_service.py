@@ -3,6 +3,26 @@ from app.products.serializers.admin import ProductAdminSerializer
 
 class ProductAdminService:
     @staticmethod
+    def list_products():
+        try:
+            products = ProductRepository.get_all_products()
+            serializer = ProductAdminSerializer(products, many=True)
+            return None, serializer.data
+        except Exception as e:
+            return str(e), None
+
+    @staticmethod
+    def get_product(product_id):
+        try:
+            product = ProductRepository.get_product_by_id(product_id)
+            if not product:
+                return "Product not found", None
+            serializer = ProductAdminSerializer(product)
+            return None, serializer.data
+        except Exception as e:
+            return str(e), None
+
+    @staticmethod
     def create_product(data):
         try:
             serializer = ProductAdminSerializer(data=data)

@@ -44,8 +44,8 @@ class Product(BaseModel):
     material = models.ForeignKey(Material, related_name='products', on_delete=models.PROTECT, null=False, blank=False)
     diety = models.ForeignKey(Diety, related_name='products', on_delete=models.PROTECT, null=False, blank=False)
     name = models.CharField(max_length=255, blank=False, null=False)
-    slug = models.SlugField(unique=True, blank=False, null=False)
-    uid = models.CharField(max_length=255, unique=True, blank=False, null=False)
+    slug = models.CharField(max_length=255, unique=True, blank=True, null=True)
+    uid = models.CharField(max_length=255, unique=True, blank=True, null=True)
     short_description = models.CharField(max_length=500, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     keywords = models.TextField(blank=True, null=True)
@@ -74,10 +74,21 @@ class ProductImage(BaseModel):
     def __str__(self):
         return f"Image for {self.product.name}"
 
+from django.utils.text import slugify
+
 @receiver(pre_save, sender=Product)
-def generate_product_uid(sender, instance, **kwargs):
+def pre_save_product(sender, instance, **kwargs):
     if not instance.uid:
         uid = create_random_uid()
         while sender.objects.filter(uid=uid).exists():
             uid = create_random_uid()
         instance.uid = uid
+        
+    if not instance.slug and instance.name:
+        base_slug = slugify(instance.name)
+        slug = base_slug
+        counter = 1
+        while sender.objects.filter(slug=slug).exclude(pk=instance.pk).exists():
+            slug = f"{base_slug}-{counter}"
+            counter += 1
+        instance.slug = slug
