@@ -9,8 +9,8 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8004:8000"
+      - "8000:8000"
     expose:
-      - "8004"
+      - "8000"
     mem_limit: 512m
     cpus: 0.5
