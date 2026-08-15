@@ -12,6 +12,7 @@ urlpatterns = [
     path('api/v1/contact/', include('app.contactus.urls_customer')),
     path('api/v1/faqs/', include('app.faq.urls_customer')),
     path('api/v1/application/', include('app.applicationmodule.urls')),
+    path('api/v1/common/', include('app.common.urls')),
 
     # Admin APIs
     path('api/admin/products/', include('app.products.urls_admin')),
