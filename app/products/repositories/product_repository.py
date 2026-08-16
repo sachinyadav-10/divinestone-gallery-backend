@@ -82,3 +82,78 @@ class ProductRepository:
                     "products": products
                 })
         return result
+
+class CategoryRepository:
+    @staticmethod
+    def get_all():
+        from app.products.models import Category
+        return Category.objects.all().order_by('-created_at')
+
+    @staticmethod
+    def get_active():
+        from app.products.models import Category
+        return Category.objects.filter(is_active=True).order_by('name')
+
+    @staticmethod
+    def get_by_id(id):
+        from app.products.models import Category
+        return Category.objects.filter(id=id).first()
+
+    @staticmethod
+    def soft_delete(id):
+        cat = CategoryRepository.get_by_id(id)
+        if cat:
+            cat.is_active = False
+            cat.save()
+            return True
+        return False
+
+class MaterialRepository:
+    @staticmethod
+    def get_all():
+        from app.products.models import Material
+        return Material.objects.all().order_by('-created_at')
+
+    @staticmethod
+    def get_active():
+        from app.products.models import Material
+        return Material.objects.filter(is_active=True).order_by('name')
+
+    @staticmethod
+    def get_by_id(id):
+        from app.products.models import Material
+        return Material.objects.filter(id=id).first()
+
+    @staticmethod
+    def soft_delete(id):
+        mat = MaterialRepository.get_by_id(id)
+        if mat:
+            mat.is_active = False
+            mat.save()
+            return True
+        return False
+
+class DietyRepository:
+    @staticmethod
+    def get_all():
+        from app.products.models import Diety
+        return Diety.objects.all().order_by('-created_at')
+
+    @staticmethod
+    def get_active():
+        from app.products.models import Diety
+        return Diety.objects.filter(is_active=True).order_by('name')
+
+    @staticmethod
+    def get_by_id(id):
+        from app.products.models import Diety
+        return Diety.objects.filter(id=id).first()
+
+    @staticmethod
+    def soft_delete(id):
+        diety = DietyRepository.get_by_id(id)
+        if diety:
+            diety.is_active = False
+            diety.save()
+            return True
+        return False

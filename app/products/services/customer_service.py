@@ -29,3 +29,27 @@ class ProductCustomerService:
             return None, data
         except Exception as e:
             return str(e), None
+
+class CategoryCustomerService:
+    @staticmethod
+    def list_active():
+        from app.products.repositories.product_repository import CategoryRepository
+        from app.products.serializers.customer import CategoryCustomerSerializer
+        items = CategoryRepository.get_active()
+        return None, CategoryCustomerSerializer(items, many=True).data
+
+class MaterialCustomerService:
+    @staticmethod
+    def list_active():
+        from app.products.repositories.product_repository import MaterialRepository
+        from app.products.serializers.customer import MaterialCustomerSerializer
+        items = MaterialRepository.get_active()
+        return None, MaterialCustomerSerializer(items, many=True).data
+
+class DietyCustomerService:
+    @staticmethod
+    def list_active():
+        from app.products.repositories.product_repository import DietyRepository
+        from app.products.serializers.customer import DietyCustomerSerializer
+        items = DietyRepository.get_active()
+        return None, DietyCustomerSerializer(items, many=True).data

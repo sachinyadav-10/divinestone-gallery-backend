@@ -33,3 +33,26 @@ class ProductDetailView(OpenAPIView):
         except Exception as e:
             logger.error(f"Error in ProductDetailView: {str(e)}", exc_info=True)
             return get_response(ErrorResponse(message="An unexpected error occurred", status_code=status.HTTP_500_INTERNAL_SERVER_ERROR))
+
+# --- Category Customer Views ---
+from app.products.services.customer_service import CategoryCustomerService, MaterialCustomerService, DietyCustomerService
+
+class CustomerCategoryListView(OpenAPIView):
+    def get(self, request):
+        error, data = CategoryCustomerService.list_active()
+        if error: return get_response(ErrorResponse(message=error, status_code=status.HTTP_400_BAD_REQUEST))
+        return get_response(SuccessResponse(data=data, message="Categories fetched successfully"))
+
+# --- Material Customer Views ---
+class CustomerMaterialListView(OpenAPIView):
+    def get(self, request):
+        error, data = MaterialCustomerService.list_active()
+        if error: return get_response(ErrorResponse(message=error, status_code=status.HTTP_400_BAD_REQUEST))
+        return get_response(SuccessResponse(data=data, message="Materials fetched successfully"))
+
+# --- Diety Customer Views ---
+class CustomerDietyListView(OpenAPIView):
+    def get(self, request):
+        error, data = DietyCustomerService.list_active()
+        if error: return get_response(ErrorResponse(message=error, status_code=status.HTTP_400_BAD_REQUEST))
+        return get_response(SuccessResponse(data=data, message="Dieties fetched successfully"))
