@@ -51,9 +51,88 @@ class ProductAdminService:
     @staticmethod
     def soft_delete_product(product_id):
         try:
-            success = ProductRepository.soft_delete_product(product_id)
-            if not success:
-                return "Product not found", None
-            return None, {"deleted": True}
+            if ProductRepository.soft_delete_product(product_id):
+                return None, {"id": product_id}
+            return "Product not found", None
         except Exception as e:
             return str(e), None
+
+class CategoryAdminService:
+    @staticmethod
+    def list_categories():
+        from app.products.repositories.product_repository import CategoryRepository
+        return CategoryRepository.get_all()
+
+    @staticmethod
+    def create_category(data):
+        from app.products.repositories.product_repository import CategoryRepository
+        return CategoryRepository.create(data)
+
+    @staticmethod
+    def get_category(id):
+        from app.products.repositories.product_repository import CategoryRepository
+        return CategoryRepository.get_by_id(id)
+
+    @staticmethod
+    def update_category(id, data):
+        from app.products.repositories.product_repository import CategoryRepository
+        return CategoryRepository.update(id, data)
+
+    @staticmethod
+    def soft_delete_category(id):
+        from app.products.repositories.product_repository import CategoryRepository
+        return CategoryRepository.soft_delete(id)
+
+
+class MaterialAdminService:
+    @staticmethod
+    def list_materials():
+        from app.products.repositories.product_repository import MaterialRepository
+        return MaterialRepository.get_all()
+
+    @staticmethod
+    def create_material(data):
+        from app.products.repositories.product_repository import MaterialRepository
+        return MaterialRepository.create(data)
+
+    @staticmethod
+    def get_material(id):
+        from app.products.repositories.product_repository import MaterialRepository
+        return MaterialRepository.get_by_id(id)
+
+    @staticmethod
+    def update_material(id, data):
+        from app.products.repositories.product_repository import MaterialRepository
+        return MaterialRepository.update(id, data)
+
+    @staticmethod
+    def soft_delete_material(id):
+        from app.products.repositories.product_repository import MaterialRepository
+        return MaterialRepository.soft_delete(id)
+
+
+class DietyAdminService:
+    @staticmethod
+    def list_dieties():
+        from app.products.repositories.product_repository import DietyRepository
+        return DietyRepository.get_all()
+
+    @staticmethod
+    def create_diety(data):
+        from app.products.repositories.product_repository import DietyRepository
+        return DietyRepository.create(data)
+
+    @staticmethod
+    def get_diety(id):
+        from app.products.repositories.product_repository import DietyRepository
+        return DietyRepository.get_by_id(id)
+
+    @staticmethod
+    def update_diety(id, data):
+        from app.products.repositories.product_repository import DietyRepository
+        return DietyRepository.update(id, data)
+
+    @staticmethod
+    def soft_delete_diety(id):
+        from app.products.repositories.product_repository import DietyRepository
+        return DietyRepository.soft_delete(id)

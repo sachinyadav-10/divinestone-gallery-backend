@@ -1,6 +1,4 @@
 from django.db import models
-from django.db.models.signals import pre_save
-from django.dispatch import receiver
 from app.common.models import BaseModel
 import string
 import random
@@ -16,7 +14,7 @@ def create_random_uid(size=8, chars=string.digits + string.ascii_uppercase):
 
 class Category(BaseModel):
     name = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255, unique=True)
+    slug = models.CharField(max_length=16, unique=True)
     description = models.TextField(blank=True, null=True)
     image_url = models.URLField(max_length=1024, blank=True, null=True)
     is_active = models.BooleanField(default=True)
@@ -34,6 +32,7 @@ class Material(BaseModel):
 class Diety(BaseModel):
     name = models.CharField(max_length=255)
     slug = models.CharField(max_length=16, unique=True)
+    categories = models.ManyToManyField(Category, related_name='dieties', blank=True)
     is_active = models.BooleanField(default=True)
     
     def __str__(self):
@@ -73,22 +72,3 @@ class ProductImage(BaseModel):
 
     def __str__(self):
         return f"Image for {self.product.name}"
-
-from django.utils.text import slugify
-
-@receiver(pre_save, sender=Product)
-def pre_save_product(sender, instance, **kwargs):
-    if not instance.uid:
-        uid = create_random_uid()
-        while sender.objects.filter(uid=uid).exists():
-            uid = create_random_uid()
-        instance.uid = uid
-        
-    if not instance.slug and instance.name:
-        base_slug = slugify(instance.name)
-        slug = base_slug
-        counter = 1
-        while sender.objects.filter(slug=slug).exclude(pk=instance.pk).exists():
-            slug = f"{base_slug}-{counter}"
-            counter += 1
-        instance.slug = slug

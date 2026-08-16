@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from app.products.models import Product, ProductImage
+from app.products.models import Product, ProductImage, Category, Material, Diety
 
 class ProductCardSerializer(serializers.ModelSerializer):
     title = serializers.CharField(source='name')
@@ -30,3 +30,18 @@ class ProductDetailSerializer(serializers.ModelSerializer):
 
     def get_images(self, obj):
         return [{"image_url": img.image_url, "alt_text": img.alt_text, "cover_photo": img.cover_photo} for img in obj.images.all().order_by('display_order')]
+
+class CategoryCustomerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'slug', 'description', 'image_url']
+
+class MaterialCustomerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Material
+        fields = ['id', 'name', 'slug']
+
+class DietyCustomerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Diety
+        fields = ['id', 'name', 'slug']
