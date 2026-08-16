@@ -3,29 +3,23 @@ from django.db import connections
 from app.applicationmodule.constants import *
 from app.products.repositories.product_repository import ProductRepository
 from app.reviews.repositories.review_repository import ReviewRepository
-from app.products.serializers.customer import ProductCardSerializer
 from app.reviews.serializers.admin import ReviewAdminSerializer
-from app.applicationmodule.serializers import CategoryCardSerializer
 import logging
 
 logger = logging.getLogger(__name__)
 
 def fetch_popular_moorti_data():
-    products = ProductRepository.get_active_products().filter(is_featured=True).order_by('-created_at')[:10]
+    error, products_data = ProductRepository.get_popular_moorti_data()
     return {
         "type": HOME_PAGE_POPULAR_MOORTI_BLOCK,
         "data": {
             "title": HOME_PAGE_POPULAR_MOORTI_BLOCK_TITLE,
-            "products": ProductCardSerializer(products, many=True).data
+            "products": products_data or []
         }
     }
 
 def fetch_dream_moorti_data():
     diety_grouped_data = ProductRepository.get_top_products_by_diety(limit_per_diety=5)
-    
-    # Serialize nested products
-    for group in diety_grouped_data:
-        group['products'] = ProductCardSerializer(group['products'], many=True).data
         
     return {
         "type": HOME_PAGE_DREAM_MOORTI_BLOCK,
@@ -36,34 +30,33 @@ def fetch_dream_moorti_data():
     }
 
 def fetch_dream_temples_data():
-    # Assuming the category slug for temples is 'temples'
-    products = ProductRepository.get_active_products().filter(category__slug='temples').order_by('-is_featured', '-created_at')[:10]
+    error, products_data = ProductRepository.get_dream_temples_data()
     return {
         "type": HOME_PAGE_DREAM_TEMPLES_BLOCK,
         "data": {
             "title": HOME_PAGE_DREAM_TEMPLES_BLOCK_TITLE,
-            "products": ProductCardSerializer(products, many=True).data
+            "products": products_data or []
         }
     }
 
 def fetch_categories_data():
-    categories = ProductRepository.get_active_categories()
+    from app.products.repositories.product_repository import CategoryRepository
+    error, categories_data = CategoryRepository.get_active()
     return {
         "type": HOME_PAGE_CATEGORIES_BLOCK,
         "data": {
             "title": HOME_PAGE_CATEGORIES_BLOCK_TITLE,
-            "categories": CategoryCardSerializer(categories, many=True).data
+            "categories": categories_data or []
         }
     }
 
 def fetch_home_decors_data():
-    # Assuming the category slug for home decors is 'home-decor'
-    products = ProductRepository.get_active_products().filter(category__slug='home-decor').order_by('-is_featured', '-created_at')[:10]
+    error, products_data = ProductRepository.get_home_decors_data()
     return {
         "type": HOME_PAGE_HOME_DECORS_BLOCK,
         "data": {
             "title": HOME_PAGE_HOME_DECORS_BLOCK_TITLE,
-            "products": ProductCardSerializer(products, many=True).data
+            "products": products_data or []
         }
     }
 

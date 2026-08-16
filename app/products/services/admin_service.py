@@ -61,132 +61,78 @@ class CategoryAdminService:
     @staticmethod
     def list_categories():
         from app.products.repositories.product_repository import CategoryRepository
-        from app.products.serializers.admin import CategoryAdminSerializer
-        items = CategoryRepository.get_all()
-        return None, CategoryAdminSerializer(items, many=True).data
+        return CategoryRepository.get_all()
 
     @staticmethod
     def create_category(data):
-        from app.products.serializers.admin import CategoryAdminSerializer
-        serializer = CategoryAdminSerializer(data=data)
-        if serializer.is_valid():
-            item = serializer.save()
-            return None, CategoryAdminSerializer(item).data
-        return str(serializer.errors), None
+        from app.products.repositories.product_repository import CategoryRepository
+        return CategoryRepository.create(data)
 
     @staticmethod
     def get_category(id):
         from app.products.repositories.product_repository import CategoryRepository
-        from app.products.serializers.admin import CategoryAdminSerializer
-        item = CategoryRepository.get_by_id(id)
-        if not item: return "Not found", None
-        return None, CategoryAdminSerializer(item).data
+        return CategoryRepository.get_by_id(id)
 
     @staticmethod
     def update_category(id, data):
         from app.products.repositories.product_repository import CategoryRepository
-        from app.products.serializers.admin import CategoryAdminSerializer
-        item = CategoryRepository.get_by_id(id)
-        if not item: return "Not found", None
-        serializer = CategoryAdminSerializer(item, data=data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return None, serializer.data
-        return str(serializer.errors), None
+        return CategoryRepository.update(id, data)
 
     @staticmethod
     def soft_delete_category(id):
         from app.products.repositories.product_repository import CategoryRepository
-        if CategoryRepository.soft_delete(id):
-            return None, {"id": id}
-        return "Not found", None
+        return CategoryRepository.soft_delete(id)
 
 
 class MaterialAdminService:
     @staticmethod
     def list_materials():
         from app.products.repositories.product_repository import MaterialRepository
-        from app.products.serializers.admin import MaterialAdminSerializer
-        items = MaterialRepository.get_all()
-        return None, MaterialAdminSerializer(items, many=True).data
+        return MaterialRepository.get_all()
 
     @staticmethod
     def create_material(data):
-        from app.products.serializers.admin import MaterialAdminSerializer
-        serializer = MaterialAdminSerializer(data=data)
-        if serializer.is_valid():
-            item = serializer.save()
-            return None, MaterialAdminSerializer(item).data
-        return str(serializer.errors), None
+        from app.products.repositories.product_repository import MaterialRepository
+        return MaterialRepository.create(data)
 
     @staticmethod
     def get_material(id):
         from app.products.repositories.product_repository import MaterialRepository
-        from app.products.serializers.admin import MaterialAdminSerializer
-        item = MaterialRepository.get_by_id(id)
-        if not item: return "Not found", None
-        return None, MaterialAdminSerializer(item).data
+        return MaterialRepository.get_by_id(id)
 
     @staticmethod
     def update_material(id, data):
         from app.products.repositories.product_repository import MaterialRepository
-        from app.products.serializers.admin import MaterialAdminSerializer
-        item = MaterialRepository.get_by_id(id)
-        if not item: return "Not found", None
-        serializer = MaterialAdminSerializer(item, data=data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return None, serializer.data
-        return str(serializer.errors), None
+        return MaterialRepository.update(id, data)
 
     @staticmethod
     def soft_delete_material(id):
         from app.products.repositories.product_repository import MaterialRepository
-        if MaterialRepository.soft_delete(id):
-            return None, {"id": id}
-        return "Not found", None
+        return MaterialRepository.soft_delete(id)
 
 
 class DietyAdminService:
     @staticmethod
     def list_dieties():
         from app.products.repositories.product_repository import DietyRepository
-        from app.products.serializers.admin import DietyAdminSerializer
-        items = DietyRepository.get_all()
-        return None, DietyAdminSerializer(items, many=True).data
+        return DietyRepository.get_all()
 
     @staticmethod
     def create_diety(data):
-        from app.products.serializers.admin import DietyAdminSerializer
-        serializer = DietyAdminSerializer(data=data)
-        if serializer.is_valid():
-            item = serializer.save()
-            return None, DietyAdminSerializer(item).data
-        return str(serializer.errors), None
+        from app.products.repositories.product_repository import DietyRepository
+        return DietyRepository.create(data)
 
     @staticmethod
     def get_diety(id):
         from app.products.repositories.product_repository import DietyRepository
-        from app.products.serializers.admin import DietyAdminSerializer
-        item = DietyRepository.get_by_id(id)
-        if not item: return "Not found", None
-        return None, DietyAdminSerializer(item).data
+        return DietyRepository.get_by_id(id)
 
     @staticmethod
     def update_diety(id, data):
         from app.products.repositories.product_repository import DietyRepository
-        from app.products.serializers.admin import DietyAdminSerializer
-        item = DietyRepository.get_by_id(id)
-        if not item: return "Not found", None
-        serializer = DietyAdminSerializer(item, data=data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return None, serializer.data
-        return str(serializer.errors), None
+        return DietyRepository.update(id, data)
 
     @staticmethod
     def soft_delete_diety(id):
         from app.products.repositories.product_repository import DietyRepository
-        if DietyRepository.soft_delete(id):
-            return None, {"id": id}
-        return "Not found", None
+        return DietyRepository.soft_delete(id)

@@ -14,7 +14,7 @@ def create_random_uid(size=8, chars=string.digits + string.ascii_uppercase):
 
 class Category(BaseModel):
     name = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255, unique=True)
+    slug = models.CharField(max_length=16, unique=True)
     description = models.TextField(blank=True, null=True)
     image_url = models.URLField(max_length=1024, blank=True, null=True)
     is_active = models.BooleanField(default=True)
